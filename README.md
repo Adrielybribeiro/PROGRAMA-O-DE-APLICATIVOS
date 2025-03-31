@@ -1,4 +1,17 @@
 #PROGRAMAÇÃODEAPLICATIVOS
+GET
+Retorna dados de um servidor 
+Por exemplo, uma solicitação GET para o endpoint /products de uma API de comércio eletrônico retornaria todos os produtos do banco de dados 
+POST
+Envia dados para o servidor para criar um novo recurso 
+Por exemplo, um gerente de uma loja de comércio eletrônico enviaria uma solicitação POST para o endpoint /products para adicionar um novo produto ao banco de dados 
+PUT 
+Atualiza ou substitui um recurso existente
+O cliente deve fornecer uma representação completa do recurso
+DELETE Remove um recurso do servidor. 
+Estes métodos correspondem às operações de criar, ler, atualizar e excluir (ou CRUD). 
+
+
 O HTTP é um protocolo de comunicação. Através dele o cliente e o servidor conseguem se comunicar, seguindo um conjunto de regras bem definidas (por isso chamamos de protocolo). Por exemplo, se estivermos falando de uma aplicação web, o cliente é o navegador, ele envia um pedido para o servidor web usando o protocolo HTTP, com base nesse pedido, se tudo estiver correto, o servidor responde também usando o mesmo protocolo o conteúdo solicitado.
 
 O que é 200, 404, 301 e outros números?
