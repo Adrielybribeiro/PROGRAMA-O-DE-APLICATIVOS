@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Meus Animes Web App</title>
+</head>
+<body onload="carregarAnimes()">
+    <h1>Animes Web App</h1>
+
+    <div>
+        <h2>Adicionar Anime</h2>
+        <input type="text" id="novoAnime" placeholder="Nome do anime">
+        <button onclick="adicionarNovoAnime()">Adicionar</button>
+    </div>
+
+    <div>
+        <h2>Consultar Anime Pelo ID</h2>
+        <input type="number" id="idBuscado" placeholder="ID">
+        <button onclick="procurarAnimePeloId()">Procurar</button>
+        <p id="AnimeBuscado"></p>
+    </div>
+
+    <div>
+        <h2>Listar Animes</h2>
+        <button onclick="carregarAnimes()">Listar</button>
+        <ul id="animes"></ul>
+    </div>
+
+    <div>
+        <h2>Atualizar Anime</h2>
+        <input type="number" id="idAtualizar" placeholder="ID">
+        <input type="text" id="conteudoAtualizado" placeholder="Novo Nome">
+        <button onclick="atualizarAnimePeloId()">Atualizar</button>
+        <p id="statusAtualizacao"></p>
+    </div>
+
+    <div>
+        <h2>Remover Anime</h2>
+        <input type="number" id="idRemover" placeholder="ID">
+        <button onclick="removerAnimePeloId()">Remover</button>
+        <p id="statusRemocao"></p>
+    </div>
+</body>
+</html>
