@@ -3,45 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <title>Meus Animes</title>
+    
+    <!-- Bootstrap para estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Meus Animes Web App</title>
+
+    <script src="script.js" defer></script>
 </head>
-<body onload="carregarAnimes()">
-    <h1>Animes Web App</h1>
+<body class="bg-light">
 
-    <div>
-        <h2>Adicionar Anime</h2>
-        <input type="text" id="novoAnime" placeholder="Nome do anime">
-        <button onclick="adicionarNovoAnime()">Adicionar</button>
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">📺 Meus Animes</h1>
+
+        <!-- Adicionar Anime -->
+        <div class="card mt-4 p-3">
+            <h3>Adicionar Anime</h3>
+            <div class="input-group">
+                <input type="text" id="novoAnime" class="form-control" placeholder="Nome do anime">
+                <button class="btn btn-success" onclick="adicionarNovoAnime()">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Consultar Anime Pelo ID -->
+        <div class="card mt-4 p-3">
+            <h3>Consultar Anime pelo ID</h3>
+            <div class="input-group">
+                <input type="number" id="idBuscado" class="form-control" placeholder="ID">
+                <button class="btn btn-primary" onclick="procurarAnimePeloId()">Procurar</button>
+            </div>
+            <p id="AnimeBuscado" class="mt-2 text-info"></p>
+        </div>
+
+        <!-- Lista de Animes -->
+        <div class="card mt-4 p-3">
+            <h3>Lista de Animes</h3>
+            <button class="btn btn-dark mb-2" onclick="carregarAnimes()">🔄 Atualizar Lista</button>
+            <ul id="animes" class="list-group"></ul>
+        </div>
+
+        <!-- Atualizar Anime -->
+        <div class="card mt-4 p-3">
+            <h3>Atualizar Anime</h3>
+            <div class="input-group">
+                <input type="number" id="idAtualizar" class="form-control" placeholder="ID">
+                <input type="text" id="conteudoAtualizado" class="form-control" placeholder="Novo Nome">
+                <button class="btn btn-warning" onclick="atualizarAnimePeloId()">Atualizar</button>
+            </div>
+            <p id="statusAtualizacao" class="mt-2 text-warning"></p>
+        </div>
+
+        <!-- Remover Anime -->
+        <div class="card mt-4 p-3">
+            <h3>Remover Anime</h3>
+            <div class="input-group">
+                <input type="number" id="idRemover" class="form-control" placeholder="ID">
+                <button class="btn btn-danger" onclick="removerAnimePeloId()">Remover</button>
+            </div>
+            <p id="statusRemocao" class="mt-2 text-danger"></p>
+        </div>
+
     </div>
 
-    <div>
-        <h2>Consultar Anime Pelo ID</h2>
-        <input type="number" id="idBuscado" placeholder="ID">
-        <button onclick="procurarAnimePeloId()">Procurar</button>
-        <p id="AnimeBuscado"></p>
-    </div>
-
-    <div>
-        <h2>Listar Animes</h2>
-        <button onclick="carregarAnimes()">Listar</button>
-        <ul id="animes"></ul>
-    </div>
-
-    <div>
-        <h2>Atualizar Anime</h2>
-        <input type="number" id="idAtualizar" placeholder="ID">
-        <input type="text" id="conteudoAtualizado" placeholder="Novo Nome">
-        <button onclick="atualizarAnimePeloId()">Atualizar</button>
-        <p id="statusAtualizacao"></p>
-    </div>
-
-    <div>
-        <h2>Remover Anime</h2>
-        <input type="number" id="idRemover" placeholder="ID">
-        <button onclick="removerAnimePeloId()">Remover</button>
-        <p id="statusRemocao"></p>
-    </div>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
